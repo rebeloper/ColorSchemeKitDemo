@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import ColorSchemeKit
 
 @main
 struct ColorSchemeKitDemoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().usesColorSchemeKit()
         }
     }
 }

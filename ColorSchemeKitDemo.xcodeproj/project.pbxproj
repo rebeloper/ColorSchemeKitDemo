@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,11 @@
 		C9AB66A125D96896001BC51C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB668C25D96894001BC51C /* ContentView.swift */; };
 		C9AB66A225D96896001BC51C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9AB668D25D96896001BC51C /* Assets.xcassets */; };
 		C9AB66A325D96896001BC51C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9AB668D25D96896001BC51C /* Assets.xcassets */; };
+		C9AB66B025D968C1001BC51C /* ColorSchemeKit in Frameworks */ = {isa = PBXBuildFile; productRef = C9AB66AF25D968C1001BC51C /* ColorSchemeKit */; };
+		C9AB66B425D96BCB001BC51C /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB66B325D96BCB001BC51C /* SheetView.swift */; };
+		C9AB66B525D96BCB001BC51C /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB66B325D96BCB001BC51C /* SheetView.swift */; };
+		C9AB66B925D96FCE001BC51C /* PushedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB66B825D96FCE001BC51C /* PushedView.swift */; };
+		C9AB66BA25D96FCE001BC51C /* PushedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AB66B825D96FCE001BC51C /* PushedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,8 @@
 		C9AB669A25D96896001BC51C /* ColorSchemeKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorSchemeKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9AB669C25D96896001BC51C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9AB669D25D96896001BC51C /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		C9AB66B325D96BCB001BC51C /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
+		C9AB66B825D96FCE001BC51C /* PushedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9AB66B025D968C1001BC51C /* ColorSchemeKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +67,8 @@
 			children = (
 				C9AB668B25D96894001BC51C /* ColorSchemeKitDemoApp.swift */,
 				C9AB668C25D96894001BC51C /* ContentView.swift */,
+				C9AB66B325D96BCB001BC51C /* SheetView.swift */,
+				C9AB66B825D96FCE001BC51C /* PushedView.swift */,
 				C9AB668D25D96896001BC51C /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -106,6 +116,9 @@
 			dependencies = (
 			);
 			name = "ColorSchemeKitDemo (iOS)";
+			packageProductDependencies = (
+				C9AB66AF25D968C1001BC51C /* ColorSchemeKit */,
+			);
 			productName = "ColorSchemeKitDemo (iOS)";
 			productReference = C9AB669225D96896001BC51C /* ColorSchemeKitDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -153,6 +166,9 @@
 				Base,
 			);
 			mainGroup = C9AB668525D96894001BC51C;
+			packageReferences = (
+				C9AB66AE25D968C1001BC51C /* XCRemoteSwiftPackageReference "ColorSchemeKit" */,
+			);
 			productRefGroup = C9AB669325D96896001BC51C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -188,7 +204,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9AB66A025D96896001BC51C /* ContentView.swift in Sources */,
+				C9AB66B425D96BCB001BC51C /* SheetView.swift in Sources */,
 				C9AB669E25D96896001BC51C /* ColorSchemeKitDemoApp.swift in Sources */,
+				C9AB66B925D96FCE001BC51C /* PushedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,7 +215,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9AB66A125D96896001BC51C /* ContentView.swift in Sources */,
+				C9AB66B525D96BCB001BC51C /* SheetView.swift in Sources */,
 				C9AB669F25D96896001BC51C /* ColorSchemeKitDemoApp.swift in Sources */,
+				C9AB66BA25D96FCE001BC51C /* PushedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,6 +459,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C9AB66AE25D968C1001BC51C /* XCRemoteSwiftPackageReference "ColorSchemeKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rebeloper/ColorSchemeKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C9AB66AF25D968C1001BC51C /* ColorSchemeKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C9AB66AE25D968C1001BC51C /* XCRemoteSwiftPackageReference "ColorSchemeKit" */;
+			productName = ColorSchemeKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C9AB668625D96894001BC51C /* Project object */;
 }
