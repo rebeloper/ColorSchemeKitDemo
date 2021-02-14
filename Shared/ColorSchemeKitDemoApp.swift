@@ -12,7 +12,9 @@ import ColorSchemeKit
 struct ColorSchemeKitDemoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView().usesColorSchemeKit()
+            ColorSchemeKitView {
+                ContentView()
+            }
         }
     }
 }
